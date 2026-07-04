@@ -1,0 +1,163 @@
+{
+  "priority_mappings": {
+    "ai_processes": {
+      "tier": "ai",
+      "nice_value": -10,
+      "ionice_class": 1,
+      "ionice_priority": 0,
+      "processes": [
+        {
+          "name": "python",
+          "patterns": ["python.*train", "python.*infer", "python.*model"],
+          "description": "Python AI/ML training and inference"
+        },
+        {
+          "name": "tensorflow",
+          "patterns": ["tensorflow", "tf"],
+          "description": "TensorFlow framework"
+        },
+        {
+          "name": "pytorch",
+          "patterns": ["torch", "pytorch"],
+          "description": "PyTorch framework"
+        },
+        {
+          "name": "keras",
+          "patterns": ["keras"],
+          "description": "Keras framework"
+        },
+        {
+          "name": "jupyter",
+          "patterns": ["jupyter", "ipython"],
+          "description": "Jupyter notebooks"
+        },
+        {
+          "name": "cuda",
+          "patterns": ["cuda", "nvidia", "gpu"],
+          "description": "CUDA GPU processes"
+        }
+      ]
+    },
+    "ide_processes": {
+      "tier": "ide",
+      "nice_value": -5,
+      "ionice_class": 2,
+      "ionice_priority": 0,
+      "processes": [
+        {
+          "name": "vscode",
+          "patterns": ["code", "vscode"],
+          "description": "Visual Studio Code"
+        },
+        {
+          "name": "intellij",
+          "patterns": ["idea", "pycharm", "webstorm"],
+          "description": "JetBrains IDEs"
+        },
+        {
+          "name": "vim",
+          "patterns": ["vim", "nvim", "neovim"],
+          "description": "Vim/Neovim editors"
+        },
+        {
+          "name": "emacs",
+          "patterns": ["emacs"],
+          "description": "Emacs editor"
+        },
+        {
+          "name": "nano",
+          "patterns": ["nano"],
+          "description": "Nano editor"
+        }
+      ]
+    },
+    "interactive_processes": {
+      "tier": "interactive",
+      "nice_value": 0,
+      "ionice_class": 2,
+      "ionice_priority": 4,
+      "processes": [
+        {
+          "name": "firefox",
+          "patterns": ["firefox"],
+          "description": "Firefox browser"
+        },
+        {
+          "name": "chrome",
+          "patterns": ["chrome", "chromium"],
+          "description": "Chrome/Chromium browsers"
+        },
+        {
+          "name": "terminal",
+          "patterns": ["bash", "zsh", "fish", "terminal"],
+          "description": "Terminal shells"
+        },
+        {
+          "name": "audio",
+          "patterns": ["pulseaudio", "pipewire", "alsa"],
+          "description": "Audio services"
+        }
+      ]
+    },
+    "normal_processes": {
+      "tier": "normal",
+      "nice_value": 10,
+      "ionice_class": 2,
+      "ionice_priority": 7,
+      "processes": [
+        {
+          "name": "systemd",
+          "patterns": ["systemd"],
+          "description": "System init system"
+        },
+        {
+          "name": "dbus",
+          "patterns": ["dbus"],
+          "description": "D-Bus message system"
+        },
+        {
+          "name": "network",
+          "patterns": ["networkmanager", "network"],
+          "description": "Network services"
+        },
+        {
+          "name": "cron",
+          "patterns": ["cron", "anacron"],
+          "description": "Scheduled tasks"
+        }
+      ]
+    },
+    "background_processes": {
+      "tier": "background",
+      "nice_value": 19,
+      "ionice_class": 3,
+      "ionice_priority": 7,
+      "processes": [
+        {
+          "name": "updatedb",
+          "patterns": ["updatedb"],
+          "description": "Database update utility"
+        },
+        {
+          "name": "backup",
+          "patterns": ["backup", "rsync", "tar"],
+          "description": "Backup processes"
+        },
+        {
+          "name": "indexing",
+          "patterns": ["tracker", "index"],
+          "description": "File indexing services"
+        },
+        {
+          "name": "logrotate",
+          "patterns": ["logrotate"],
+          "description": "Log rotation"
+        }
+      ]
+    }
+  },
+  "custom_mappings": {
+    "description": "User-defined custom process mappings",
+    "mappings": []
+  }
+}

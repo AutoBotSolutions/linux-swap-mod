@@ -1,0 +1,103 @@
+{
+  "config_name": "AI Workload Optimization",
+  "description": "Configuration for AI/ML workloads with GPU training and inference",
+  "target_system": "AI Development Workstations",
+  "optimization_level": "aggressive",
+  "priority_tiers": {
+    "ai": {
+      "nice_value": -10,
+      "ionice_class": 1,
+      "ionice_priority": 0,
+      "process_patterns": [
+        "python.*train",
+        "python.*infer",
+        "tensor",
+        "torch",
+        "keras",
+        "tensorflow",
+        "jupyter",
+        "cuda",
+        "nvidia-smi"
+      ],
+      "memory_priority": "high",
+      "cpu_affinity": "performance"
+    },
+    "ide": {
+      "nice_value": -5,
+      "ionice_class": 2,
+      "ionice_priority": 0,
+      "process_patterns": [
+        "code",
+        "idea",
+        "pycharm",
+        "vscode",
+        "vim",
+        "emacs",
+        "nano"
+      ],
+      "memory_priority": "medium",
+      "cpu_affinity": "balanced"
+    },
+    "interactive": {
+      "nice_value": 0,
+      "ionice_class": 2,
+      "ionice_priority": 4,
+      "process_patterns": [
+        "firefox",
+        "chrome",
+        "chromium",
+        "browser",
+        "terminal",
+        "bash",
+        "zsh"
+      ],
+      "memory_priority": "normal",
+      "cpu_affinity": "balanced"
+    },
+    "normal": {
+      "nice_value": 10,
+      "ionice_class": 2,
+      "ionice_priority": 7,
+      "process_patterns": [
+        "systemd",
+        "dbus",
+        "network"
+      ],
+      "memory_priority": "low",
+      "cpu_affinity": "powersave"
+    },
+    "background": {
+      "nice_value": 19,
+      "ionice_class": 3,
+      "ionice_priority": 7,
+      "process_patterns": [
+        "updatedb",
+        "backup",
+        "rsync",
+        "cron"
+      ],
+      "memory_priority": "minimal",
+      "cpu_affinity": "powersave"
+    }
+  },
+  "kernel_parameters": {
+    "vm.swappiness": 10,
+    "vm.vfs_cache_pressure": 50,
+    "vm.dirty_ratio": 15,
+    "vm.dirty_background_ratio": 5,
+    "vm.min_free_kbytes": 65536
+  },
+  "swap_settings": {
+    "enable_swap": true,
+    "swap_priority": "ai_first",
+    "swap_threshold": 85,
+    "aggressive_swap": false
+  },
+  "monitoring": {
+    "check_interval": 3,
+    "memory_threshold": 90,
+    "cpu_threshold": 95,
+    "swap_threshold": 80,
+    "auto_adjust": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "kernel_presets": {
+    "conservative": {
+      "name": "Conservative Memory Management",
+      "description": "Minimize swap usage, prioritize RAM",
+      "use_case": "Systems with sufficient RAM",
+      "parameters": {
+        "vm.swappiness": 1,
+        "vm.vfs_cache_pressure": 75,
+        "vm.dirty_ratio": 5,
+        "vm.dirty_background_ratio": 2,
+        "vm.dirty_expire_centisecs": 3000,
+        "vm.dirty_writeback_centisecs": 500,
+        "vm.min_free_kbytes": 131072,
+        "vm.overcommit_memory": 1,
+        "vm.overcommit_ratio": 50
+      }
+    },
+    "balanced": {
+      "name": "Balanced Memory Management",
+      "description": "Balance between RAM and swap usage",
+      "use_case": "General purpose systems",
+      "parameters": {
+        "vm.swappiness": 10,
+        "vm.vfs_cache_pressure": 50,
+        "vm.dirty_ratio": 15,
+        "vm.dirty_background_ratio": 5,
+        "vm.dirty_expire_centisecs": 3000,
+        "vm.dirty_writeback_centisecs": 500,
+        "vm.min_free_kbytes": 65536,
+        "vm.overcommit_memory": 1,
+        "vm.overcommit_ratio": 50
+      }
+    },
+    "aggressive": {
+      "name": "Aggressive Swap Management",
+      "description": "Maximize swap usage for better RAM utilization",
+      "use_case": "Systems with limited RAM",
+      "parameters": {
+        "vm.swappiness": 60,
+        "vm.vfs_cache_pressure": 50,
+        "vm.dirty_ratio": 20,
+        "vm.dirty_background_ratio": 10,
+        "vm.dirty_expire_centisecs": 3000,
+        "vm.dirty_writeback_centisecs": 1500,
+        "vm.min_free_kbytes": 32768,
+        "vm.overcommit_memory": 1,
+        "vm.overcommit_ratio": 50
+      }
+    },
+    "performance": {
+      "name": "Performance Optimized",
+      "description": "Minimize latency, prioritize responsiveness",
+      "use_case": "Gaming and real-time applications",
+      "parameters": {
+        "vm.swappiness": 5,
+        "vm.vfs_cache_pressure": 50,
+        "vm.dirty_ratio": 10,
+        "vm.dirty_background_ratio": 3,
+        "vm.dirty_expire_centisecs": 3000,
+        "vm.dirty_writeback_centisecs": 500,
+        "vm.min_free_kbytes": 98304,
+        "vm.overcommit_memory": 0,
+        "vm.overcommit_ratio": 50
+      }
+    },
+    "server": {
+      "name": "Server Optimized",
+      "description": "Prioritize stability and throughput",
+      "use_case": "Production servers",
+      "parameters": {
+        "vm.swappiness": 20,
+        "vm.vfs_cache_pressure": 75,
+        "vm.dirty_ratio": 20,
+        "vm.dirty_background_ratio": 10,
+        "vm.dirty_expire_centisecs": 3000,
+        "vm.dirty_writeback_centisecs": 1500,
+        "vm.min_free_kbytes": 65536,
+        "vm.overcommit_memory": 2,
+        "vm.overcommit_ratio": 80
+      }
+    }
+  },
+  "parameter_explanations": {
+    "vm.swappiness": "Controls tendency to swap out memory (0-100, lower = less swap)",
+    "vm.vfs_cache_pressure": "Controls tendency to reclaim inode/dentry cache (0-100, higher = more aggressive)",
+    "vm.dirty_ratio": "Percentage of total memory that can be dirty before writeback",
+    "vm.dirty_background_ratio": "Percentage of total memory for background writeback",
+    "vm.dirty_expire_centisecs": "Time in centiseconds before dirty data expires",
+    "vm.dirty_writeback_centisecs": "Time in centiseconds between background writeback",
+    "vm.min_free_kbytes": "Minimum free memory in kilobytes",
+    "vm.overcommit_memory": "Memory overcommit handling (0=heuristic, 1=always, 2=strict)",
+    "vm.overcommit_ratio": "Percentage of RAM that can be overcommitted"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "config_name": "Gaming System Optimization",
+  "description": "Configuration for gaming systems with focus on low latency",
+  "target_system": "Gaming Desktops and Laptops",
+  "optimization_level": "performance",
+  "priority_tiers": {
+    "ai": {
+      "nice_value": -8,
+      "ionice_class": 2,
+      "ionice_priority": 0,
+      "process_patterns": [
+        "steam",
+        "game",
+        "wine",
+        "proton"
+      ],
+      "memory_priority": "high",
+      "cpu_affinity": "performance"
+    },
+    "ide": {
+      "nice_value": -3,
+      "ionice_class": 2,
+      "ionice_priority": 0,
+      "process_patterns": [
+        "discord",
+        "overlay"
+      ],
+      "memory_priority": "medium",
+      "cpu_affinity": "balanced"
+    },
+    "interactive": {
+      "nice_value": 0,
+      "ionice_class": 2,
+      "ionice_priority": 4,
+      "process_patterns": [
+        "pulseaudio",
+        "pipewire"
+      ],
+      "memory_priority": "normal",
+      "cpu_affinity": "balanced"
+    },
+    "normal": {
+      "nice_value": 10,
+      "ionice_class": 2,
+      "ionice_priority": 7,
+      "process_patterns": [
+        "systemd",
+        "network"
+      ],
+      "memory_priority": "low",
+      "cpu_affinity": "powersave"
+    },
+    "background": {
+      "nice_value": 19,
+      "ionice_class": 3,
+      "ionice_priority": 7,
+      "process_patterns": [
+        "updatedb",
+        "backup"
+      ],
+      "memory_priority": "minimal",
+      "cpu_affinity": "powersave"
+    }
+  },
+  "kernel_parameters": {
+    "vm.swappiness": 5,
+    "vm.vfs_cache_pressure": 50,
+    "vm.dirty_ratio": 10,
+    "vm.dirty_background_ratio": 3,
+    "vm.min_free_kbytes": 98304
+  },
+  "swap_settings": {
+    "enable_swap": true,
+    "swap_priority": "performance_first",
+    "swap_threshold": 90,
+    "aggressive_swap": false
+  },
+  "monitoring": {
+    "check_interval": 2,
+    "memory_threshold": 95,
+    "cpu_threshold": 98,
+    "swap_threshold": 85,
+    "auto_adjust": true
+  }
+}

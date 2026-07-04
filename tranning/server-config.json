@@ -1,0 +1,88 @@
+{
+  "config_name": "Server System Optimization",
+  "description": "Configuration for server systems with focus on stability and throughput",
+  "target_system": "Production Servers",
+  "optimization_level": "balanced",
+  "priority_tiers": {
+    "ai": {
+      "nice_value": -7,
+      "ionice_class": 2,
+      "ionice_priority": 0,
+      "process_patterns": [
+        "nginx",
+        "apache",
+        "mysql",
+        "postgres",
+        "redis",
+        "mongodb"
+      ],
+      "memory_priority": "high",
+      "cpu_affinity": "balanced"
+    },
+    "ide": {
+      "nice_value": -2,
+      "ionice_class": 2,
+      "ionice_priority": 0,
+      "process_patterns": [
+        "ssh",
+        "sshd"
+      ],
+      "memory_priority": "medium",
+      "cpu_affinity": "balanced"
+    },
+    "interactive": {
+      "nice_value": 0,
+      "ionice_class": 2,
+      "ionice_priority": 4,
+      "process_patterns": [
+        "bash",
+        "zsh"
+      ],
+      "memory_priority": "normal",
+      "cpu_affinity": "balanced"
+    },
+    "normal": {
+      "nice_value": 5,
+      "ionice_class": 2,
+      "ionice_priority": 7,
+      "process_patterns": [
+        "systemd",
+        "dbus",
+        "cron"
+      ],
+      "memory_priority": "low",
+      "cpu_affinity": "balanced"
+    },
+    "background": {
+      "nice_value": 15,
+      "ionice_class": 3,
+      "ionice_priority": 7,
+      "process_patterns": [
+        "logrotate",
+        "updatedb"
+      ],
+      "memory_priority": "minimal",
+      "cpu_affinity": "powersave"
+    }
+  },
+  "kernel_parameters": {
+    "vm.swappiness": 20,
+    "vm.vfs_cache_pressure": 75,
+    "vm.dirty_ratio": 20,
+    "vm.dirty_background_ratio": 10,
+    "vm.min_free_kbytes": 65536
+  },
+  "swap_settings": {
+    "enable_swap": true,
+    "swap_priority": "balanced",
+    "swap_threshold": 75,
+    "aggressive_swap": false
+  },
+  "monitoring": {
+    "check_interval": 10,
+    "memory_threshold": 90,
+    "cpu_threshold": 85,
+    "swap_threshold": 70,
+    "auto_adjust": true
+  }
+}

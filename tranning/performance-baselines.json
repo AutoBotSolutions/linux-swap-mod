@@ -1,0 +1,98 @@
+{
+  "baselines": {
+    "ai_workstation": {
+      "system_type": "AI Development Workstation",
+      "hardware_profile": {
+        "ram_gb": 32,
+        "cpu_cores": 16,
+        "swap_gb": 16
+      },
+      "performance_targets": {
+        "memory_usage_percent": 75,
+        "cpu_usage_percent": 80,
+        "swap_usage_percent": 20,
+        "response_time_ms": 100
+      },
+      "optimization_results": {
+        "cpu_reduction_percent": 60,
+        "memory_efficiency_percent": 40,
+        "latency_reduction_percent": 50
+      }
+    },
+    "low_end_system": {
+      "system_type": "Low-End Desktop",
+      "hardware_profile": {
+        "ram_gb": 4,
+        "cpu_cores": 2,
+        "swap_gb": 8
+      },
+      "performance_targets": {
+        "memory_usage_percent": 85,
+        "cpu_usage_percent": 90,
+        "swap_usage_percent": 60,
+        "response_time_ms": 500
+      },
+      "optimization_results": {
+        "cpu_reduction_percent": 30,
+        "memory_efficiency_percent": 25,
+        "latency_reduction_percent": 35
+      }
+    },
+    "gaming_system": {
+      "system_type": "Gaming Desktop",
+      "hardware_profile": {
+        "ram_gb": 16,
+        "cpu_cores": 8,
+        "swap_gb": 16
+      },
+      "performance_targets": {
+        "memory_usage_percent": 70,
+        "cpu_usage_percent": 85,
+        "swap_usage_percent": 10,
+        "response_time_ms": 50
+      },
+      "optimization_results": {
+        "cpu_reduction_percent": 45,
+        "memory_efficiency_percent": 35,
+        "latency_reduction_percent": 60
+      }
+    },
+    "server_system": {
+      "system_type": "Production Server",
+      "hardware_profile": {
+        "ram_gb": 64,
+        "cpu_cores": 32,
+        "swap_gb": 32
+      },
+      "performance_targets": {
+        "memory_usage_percent": 80,
+        "cpu_usage_percent": 75,
+        "swap_usage_percent": 30,
+        "response_time_ms": 200
+      },
+      "optimization_results": {
+        "cpu_reduction_percent": 35,
+        "memory_efficiency_percent": 30,
+        "latency_reduction_percent": 40
+      }
+    }
+  },
+  "measurement_methodology": {
+    "test_duration_hours": 24,
+    "workload_types": [
+      "idle",
+      "light_load",
+      "medium_load",
+      "heavy_load",
+      "stress_test"
+    ],
+    "metrics_collected": [
+      "cpu_usage",
+      "memory_usage",
+      "swap_usage",
+      "iops",
+      "latency",
+      "throughput"
+    ]
+  }
+}
