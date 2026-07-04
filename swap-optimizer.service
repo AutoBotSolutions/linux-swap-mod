@@ -1,0 +1,13 @@
+[Unit]
+Description=Linux Swap Optimizer for AI Workloads
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/swap-optimizer/swap_optimizer.py --monitor --config /etc/swap-optimizer/config.json
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target

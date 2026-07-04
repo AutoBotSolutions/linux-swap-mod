@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation | Linux Swap Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="grid-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SWAP OPTIMIZER</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="features.html" class="nav-link">FEATURES</a></li>
+                <li><a href="docs.html" class="nav-link">DOCS</a></li>
+                <li><a href="install.html" class="nav-link">INSTALL</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Install Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">DEPLOYMENT PROTOCOL</h1>
+            <p class="page-subtitle">Quick installation and system initialization</p>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="requirements">
+        <div class="section-header">
+            <h2 class="section-title">SYSTEM REQUIREMENTS</h2>
+            <p class="section-subtitle">Ensure your system meets these specifications</p>
+        </div>
+        <div class="requirements-grid">
+            <div class="requirement-card">
+                <div class="req-icon">🐧</div>
+                <h3 class="req-title">Operating System</h3>
+                <p class="req-value">Linux (Ubuntu, Debian, Fedora, Arch, etc.)</p>
+            </div>
+            <div class="requirement-card">
+                <div class="req-icon">🐍</div>
+                <h3 class="req-title">Python Version</h3>
+                <p class="req-value">Python 3.7 or higher</p>
+            </div>
+            <div class="requirement-card">
+                <div class="req-icon">⚡</div>
+                <h3 class="req-title">Systemd</h3>
+                <p class="req-value">Systemd service manager</p>
+            </div>
+            <div class="requirement-card">
+                <div class="req-icon">🔒</div>
+                <h3 class="req-title">Privileges</h3>
+                <p class="req-value">Root/sudo access for installation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Steps -->
+    <section class="installation">
+        <div class="section-header">
+            <h2 class="section-title">INSTALLATION PROCESS</h2>
+            <p class="section-subtitle">Follow these steps to deploy the system</p>
+        </div>
+        <div class="install-steps">
+            <div class="install-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3 class="step-title">CLONE REPOSITORY</h3>
+                    <p class="step-description">Clone the repository to your local system</p>
+                    <div class="code-block">
+                        <code>git clone https://github.com/yourusername/linux-swap-mod.git</code>
+                    </div>
+                </div>
+            </div>
+            <div class="install-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3 class="step-title">NAVIGATE TO DIRECTORY</h3>
+                    <p class="step-description">Change to the project directory</p>
+                    <div class="code-block">
+                        <code>cd linux-swap-mod</code>
+                    </div>
+                </div>
+            </div>
+            <div class="install-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3 class="step-title">RUN INSTALLATION SCRIPT</h3>
+                    <p class="step-description">Execute the installation script with sudo privileges</p>
+                    <div class="code-block">
+                        <code>sudo bash install.sh</code>
+                    </div>
+                </div>
+            </div>
+            <div class="install-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3 class="step-title">ENABLE SERVICE</h3>
+                    <p class="step-description">Enable the systemd service to start on boot</p>
+                    <div class="code-block">
+                        <code>sudo systemctl enable swap-optimizer</code>
+                    </div>
+                </div>
+            </div>
+            <div class="install-step">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                    <h3 class="step-title">START SERVICE</h3>
+                    <p class="step-description">Start the optimization service immediately</p>
+                    <div class="code-block">
+                        <code>sudo systemctl start swap-optimizer</code>
+                    </div>
+                </div>
+            </div>
+            <div class="install-step">
+                <div class="step-number">06</div>
+                <div class="step-content">
+                    <h3 class="step-title">VERIFY INSTALLATION</h3>
+                    <p class="step-description">Check the service status to ensure it's running</p>
+                    <div class="code-block">
+                        <code>sudo systemctl status swap-optimizer</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configuration -->
+    <section class="configuration">
+        <div class="section-header">
+            <h2 class="section-title">CONFIGURATION</h2>
+            <p class="section-subtitle">Customize the system for your needs</p>
+        </div>
+        <div class="config-info">
+            <p class="config-text">The configuration file is located at <code>/etc/swap-optimizer/config.json</code>. You can edit this file to customize optimization parameters.</p>
+            <div class="code-block">
+                <code>sudo nano /etc/swap-optimizer/config.json</code>
+            </div>
+        </div>
+        <div class="config-cta">
+            <a href="docs.html" class="btn btn-secondary">
+                <span class="btn-text">VIEW CONFIGURATION GUIDE</span>
+                <span class="btn-icon">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Manual Installation -->
+    <section class="manual-install">
+        <div class="section-header">
+            <h2 class="section-title">MANUAL INSTALLATION</h2>
+            <p class="section-subtitle">Alternative installation method</p>
+        </div>
+        <div class="manual-steps">
+            <div class="manual-step">
+                <h3 class="manual-step-title">Install Dependencies</h3>
+                <div class="code-block">
+                    <code>pip3 install -r requirements.txt</code>
+                </div>
+            </div>
+            <div class="manual-step">
+                <h3 class="manual-step-title">Copy Files</h3>
+                <div class="code-block">
+                    <code>sudo cp swap_optimizer.py /opt/swap-optimizer/</code>
+                    <code>sudo cp config.json /etc/swap-optimizer/</code>
+                </div>
+            </div>
+            <div class="manual-step">
+                <h3 class="manual-step-title">Install Service</h3>
+                <div class="code-block">
+                    <code>sudo cp swap-optimizer.service /etc/systemd/system/</code>
+                    <code>sudo systemctl daemon-reload</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="troubleshooting">
+        <div class="section-header">
+            <h2 class="section-title">TROUBLESHOOTING</h2>
+            <p class="section-subtitle">Common issues and solutions</p>
+        </div>
+        <div class="troubleshoot-grid">
+            <div class="troubleshoot-card">
+                <h3 class="troubleshoot-title">Service Won't Start</h3>
+                <p class="troubleshoot-desc">Check logs with: <code>sudo journalctl -u swap-optimizer -f</code></p>
+            </div>
+            <div class="troubleshoot-card">
+                <h3 class="troubleshoot-title">Permission Denied</h3>
+                <p class="troubleshoot-desc">Ensure you're running with sudo or as root user</p>
+            </div>
+            <div class="troubleshoot-card">
+                <h3 class="troubleshoot-title">Python Not Found</h3>
+                <p class="troubleshoot-desc">Install Python 3: <code>sudo apt install python3</code></p>
+            </div>
+            <div class="troubleshoot-card">
+                <h3 class="troubleshoot-title">Dependencies Missing</h3>
+                <p class="troubleshoot-desc">Install pip: <code>sudo apt install python3-pip</code></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">INSTALLATION COMPLETE</h2>
+            <p class="cta-subtitle">Your system is now optimized and ready</p>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn btn-primary">
+                    <span class="btn-text">RETURN HOME</span>
+                    <span class="btn-icon">→</span>
+                </a>
+                <a href="docs.html" class="btn btn-secondary">
+                    <span class="btn-text">VIEW DOCUMENTATION</span>
+                    <span class="btn-icon">📖</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SWAP OPTIMIZER</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="docs.html">Documentation</a>
+                <a href="install.html">Install</a>
+            </div>
+            <div class="footer-info">
+                <p>Version 2.0.0 | Neural System Enhancement Protocol</p>
+                <p>© 2026 Linux Swap Optimizer | MIT License</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
