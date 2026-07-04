@@ -1,3 +1,78 @@
+/* Hero Banner Image */
+.hero-banner {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+    border: 2px solid var(--primary-color);
+}
+
+/* Feature Highlight Image */
+.feature-highlight {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.feature-highlight-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(123, 44, 191, 0.3);
+    border: 2px solid var(--secondary-color);
+}
+
+/* Install Highlight Image */
+.install-highlight {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.install-highlight-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+    border: 2px solid var(--accent-color);
+}
+
+/* GitHub Promo Image */
+.github-promo-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+    border: 2px solid var(--primary-color);
+}
+
+/* Footer Promo */
+.footer-promo {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Header Promo Image */
+.header-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.header-promo-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(123, 44, 191, 0.3);
+    border: 2px solid var(--secondary-color);
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
