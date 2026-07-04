@@ -1,0 +1,54 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="github-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050508;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="github-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7b2cbf;stop-opacity:1" />
+    </linearGradient>
+    <filter id="github-glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Card Background -->
+  <rect width="600" height="400" rx="20" fill="url(#github-bg)" stroke="url(#github-gradient)" stroke-width="2"/>
+  
+  <!-- GitHub Icon -->
+  <text x="300" y="100" text-anchor="middle" font-size="80">📦</text>
+  
+  <!-- Title -->
+  <text x="300" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#00f0ff" filter="url(#github-glow)">
+    GET IT ON GITHUB
+  </text>
+  
+  <!-- Repository Info -->
+  <rect x="100" y="190" width="400" height="120" rx="10" fill="#050508" stroke="#7b2cbf" stroke-width="1"/>
+  
+  <text x="300" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">
+    AutoBotSolutions/linux-swap-mod
+  </text>
+  <text x="300" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#00f0ff">
+    v2.0.0 • MIT License
+  </text>
+  <text x="300" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" opacity="0.7">
+    Star • Fork • Watch
+  </text>
+  <text x="300" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ff006e" font-weight="bold">
+    Open Source & Free
+  </text>
+  
+  <!-- URL -->
+  <text x="300" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#7b2cbf" font-weight="bold">
+    github.com/AutoBotSolutions/linux-swap-mod
+  </text>
+  
+  <!-- Bottom Accent -->
+  <line x1="50" y1="380" x2="550" y2="380" stroke="url(#github-gradient)" stroke-width="2" opacity="0.5"/>
+</svg>
