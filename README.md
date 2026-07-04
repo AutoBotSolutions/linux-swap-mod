@@ -1,6 +1,6 @@
 # Linux Swap Optimizer for AI Workloads
 
-![Linux Swap Optimizer](docs/img/linux-swap-mod-marketing.png)
+![Linux Swap Optimizer](linux-swap-mod-marketing.png)
 
 A comprehensive swap modification system designed to reduce CPU and system load during AI development on low-end systems. The goal is to eliminate IDE and AI application lagging through intelligent swap management and process prioritization.
 
