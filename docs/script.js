@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Console easter egg
-    console.log('%c⚡ LINUX SWAP OPTIMIZER ⚡', 'color: #00f0ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00f0ff;');
+    console.log('%c⚙️ LINUX SWAP OPTIMIZER ⚙️', 'color: #00f0ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00f0ff;');
     console.log('%cNeural System Enhancement Protocol v2.0.0', 'color: #7b2cbf; font-size: 14px;');
     console.log('%cSystem Status: OPERATIONAL', 'color: #00ff00; font-size: 12px;');
 });
